@@ -70,7 +70,7 @@ dependencies {
 
     // ViewModels
     def lifecycleVersion = "2.2.0"
-    def fragmentVersion = "1.3.6"
+    def fragmentVersion = "1.5.2"
     def lifecycleRuntimeVersion = "2.5.1"
     implementation "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVersion}"
