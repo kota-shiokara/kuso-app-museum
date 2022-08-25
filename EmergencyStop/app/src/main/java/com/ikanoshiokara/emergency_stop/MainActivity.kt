@@ -19,6 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ikanoshiokara.emergency_stop.ui.theme.EmergencyStopTheme
 import com.ikanoshiokara.emergency_stop.view.pages.MainPage
+import com.ikanoshiokara.emergency_stop.view.pages.SettingsPage
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,9 @@ class MainActivity : ComponentActivity() {
                         ) {
                             composable(NavItem.MainPage.name) {
                                 MainPage()
+                            }
+                            composable(NavItem.SettingsPage.name) {
+                                SettingsPage()
                             }
                         }
                     }

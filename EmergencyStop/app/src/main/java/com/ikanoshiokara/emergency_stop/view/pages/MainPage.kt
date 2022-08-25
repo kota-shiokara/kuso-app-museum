@@ -29,6 +29,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ikanoshiokara.emergency_stop.LocalNavController
+import com.ikanoshiokara.emergency_stop.NavItem
 import com.ikanoshiokara.emergency_stop.R
 
 @Composable
@@ -44,13 +46,18 @@ fun MainPage() {
 
 @Composable
 fun MainAppBar() {
+    val navController = LocalNavController.current
     TopAppBar(
         title = {
             Text(stringResource(id = R.string.app_name))
         },
         actions = {
-            IconButton(onClick = { /* TODO: */ }) {
-                Icon(Icons.Filled.Edit, contentDescription = "")
+            IconButton(
+                onClick = {
+                    navController.navigate(NavItem.SettingsPage.name)
+                }
+            ) {
+                Icon(Icons.Filled.Edit, contentDescription = "settings_page")
             }
         }
     )
